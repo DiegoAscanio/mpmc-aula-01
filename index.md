@@ -306,7 +306,7 @@ As datas das atividades avaliativas podem mudar — a critério meu e da profª 
     Apresentação da Disciplina — Trabalho Interdisciplinar
 </div>
 
-<div class="conteudo regular" style="padding-top: 3vh;">
+<div class="conteudo small" style="padding-top: 5vh;">
 
 - Artefatos de Entregas do Trabalho Interdisciplinar — Explicação Resumida:
 
