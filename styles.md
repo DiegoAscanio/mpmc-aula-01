@@ -27,6 +27,7 @@
 
   .conteudo {
     top: 30%;
+    margin-top: 7.5vh;
     margin-left: 5%;
     margin-right: 10%;
     font-size: 28px;
@@ -43,7 +44,7 @@
   }
   
   .large {
-    font-size: 36px;
+    font-size: 24px;
   }
 
   .normal {
@@ -67,8 +68,9 @@
   .bold {
     font-weight: bold;
   }
-  .center {
-    text-align: center;
+  section.centered table {
+    margin-left: auto;
+    margin-right: auto;
   }
   section.lead p {
     text-align: justify;
@@ -101,6 +103,8 @@
   .grid-element {
     margin-left: 5%;
     margin-right: 5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
   img[alt=grid-img] {
     width: 100%;
