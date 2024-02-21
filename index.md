@@ -147,6 +147,12 @@ CEFET-MG DECOMDV — Divinópolis, 2024
 
 ---
 
+<!-- _class: lead -->
+# Apresentação da Disciplina
+
+
+---
+
 <div class="cabecalho">
     Apresentação da Disciplina — Objetivos
 </div>
@@ -386,3 +392,9 @@ As datas das atividades avaliativas podem mudar — a critério meu e da profª 
 - 5 pontos extras para alunos que ajudarem na realização da semana da computação (teoria);
 
 </div>
+
+
+---
+
+<!-- _class: lead -->
+# Revisão Sobre Arquitetura de Computadores
