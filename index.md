@@ -694,3 +694,21 @@ A Figura 8, ao lado, ilustra um circuito típico de memória com capacidade para
     - Em bytes, é dada pela fórmula anterior dividida por 8.
 
 </div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Tipos de Memórias
+</div>
+<div class="conteudo-absoluto">
+
+Existem diversos tipos de memórias, cada uma com suas características e aplicações. As relevenates para o contexto da disciplina — abordadas nos próximos slides — são:
+
+- RAM
+- ROM
+- PROM
+- EPROM e EEPROM
+- Flash
+
+</div>
