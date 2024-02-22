@@ -29,7 +29,7 @@
     top: 30%;
     margin-top: 7.5vh;
     margin-left: 5%;
-    margin-right: 10%;
+    margin-right: 5%;
     font-size: 28px;
     text-align: justify;
   }
@@ -38,15 +38,16 @@
     position: absolute;
     top: 30%;
     margin-left: 5%;
-    margin-right: 10%;
+    margin-right: 5%;
     font-size: 28px;
     text-align: justify;
   }
-  
+  .huge {
+    font-size: 32px;
+  }
   .large {
     font-size: 24px;
   }
-
   .normal {
     font-size: 22px;
   }
@@ -107,6 +108,7 @@
     padding-right: 2.5%;
   }
   img[alt=grid-img] {
+    display: block;
     width: 100%;
   }
 
@@ -398,3 +400,297 @@ As datas das atividades avaliativas podem mudar — a critério meu e da profª 
 
 <!-- _class: lead -->
 # Revisão Sobre Arquitetura de Computadores
+## Fundamentos dos sistemas Digitais
+
+
+---
+
+<div class="cabecalho huge">
+    Revisão sobre arquitetura de computadores - Fundamentos de Sistemas Digitais
+</div>
+<div class="conteudo-absoluto">
+
+**Objetivo**: revisar tópicos elementares de eletrônica digital necessários ao estudo de microcontroladores.
+
+1. Sinais Analógicos e Digitais
+2. Portas Lógicas
+
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Fundamentos — Sinais Analógicos e Digitais
+</div>
+<div class="conteudo">
+<div class="grid-66-33 small">
+<div class="grid-element">
+
+- Todos os sinais dos circuitos são elétricos. Porém, podem ser classificados em dois tipos:
+    - Analógicos
+    - Digitais
+
+- Sinais analógicos são contínuos e podem assumir qualquer valor dentro de um intervalo.
+- Sinais digitais são discretos e podem assumir apenas valores específicos. Nos sistemas digitais, que trabalham com a lógica booleana, os sinais podem assumir apenas dois valores:
+
+0. **(baixo)**
+1. **(alto)**
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/analogico.png)
+
+<figcaption>Figura 1: Sinal Analógico</figcaption>
+</figure>
+
+<figure>
+
+![grid-img](./img/digital.png)
+
+<figcaption>Figura 2: Sinal Digital</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Fundamentos — Portas Lógicas
+</div>
+<div class="conteudo">
+<div class="grid-33-66 regular">
+<div class="grid-element">
+    
+- A relação entre variáveis booleanas é chamada de **operação lógica**.
+- Portas digitais lógicas são os circuitos eletrônicos que as realizam, como mostrado na figura 3:
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/logic_gates.png)
+
+<figcaption>Figura 3: Portas (operações) lógicas e suas tabelas verdade.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<!-- _class: lead -->
+# Revisão Sobre Arquitetura de Computadores
+## Registradores e Memória
+
+
+---
+
+<div class="cabecalho huge">
+    Arquitetura de Computadores - Registradores
+</div>
+<div class="conteudo small">
+<div class="grid-50-50">
+<div class="grid-element">
+
+- Registradores são grupos de flip-flops capazes de armazenar um número finito de bits.
+    - Flip-flops, no contexto presente, são dispositivos capazes de armazenar um bit de informação.
+    - Registradores são compostos pela associação de flip-flops.
+
+- O número finito de bits armazenado por um registrador é definido pela quantidade de flip-flops que o compõem.
+- Registradores são fundamentais aos micro (processadores | controladores) por serem capazes de armazenar informações.
+- As figuras 4 e 5 mostram respectivamente um flip-flop do tipo D e um registrador de 4 bits.
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/D-flip-flop.png)
+
+<figcaption>Figura 4 - Flip-flop do tipo D</figcaption>
+</figure>
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/4-bit-register.png)
+
+<figcaption>Figura 5 - Registrador de 4 bits composto por Flip-Flops do tipo D</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Arquitetura de Computadores - Registrador Comercial 74373
+</div>
+<div class="conteudo-absoluto small">
+<div class="grid-50-50">
+<div class="grid-element">
+
+- O 74373 é um registrador comercial de 8 bits composto por 8 bits de entrada e 8 bits de saída, ambos paralelos, como mostrado pela figura 6.
+    - Os pinos `D0 - D7` são as entradas de dados, enquanto os pinos `O0 - O7` são as saídas de dados.
+    - O pino `OE` é o pino de habilitação de saída, que quando em nível lógico baixo, habilita a saída (leitura) dos dados.
+    - Já o pino `LE` é o pino de habilitação de escrita, que quando em nível lógico alto, habilita a gravação (entrada) dos dados no registrador.
+
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/74373.png)
+
+<figcaption>Figura 6 - Registrador Comercial 74373 </figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Arquitetura de Computadores - Funcionamento do Registrador Comercial 74373
+</div>
+<div class="conteudo-absoluto scriptsize">
+<div class="grid-50-50">
+<div class="grid-element">
+
+- Considerando os pinos de controle para gravação \\((LE)\\) e leitura \\((\\overline{OE})\\) de dados do registrador 74373, quando a leitura está habilitada \\((LE = 1)\\) e a gravação habilitada \\((OE = 0)\\), a saída do n-ésimo bit do registrador representada por \\(O_{n}\\) tem o mesmo valor da entrada \\(D_{n}\\).
+-   Quando a gravação está habilitada \\((OE = 0)\\) e a leitura desabilitada \\((LE = 0)\\), a saída do n-ésimo bit do registrador não muda, pois, nenhum comando de leitura — \\(LE = 1\\) — foi aplicado ao registrador.
+- Quando a gravação está desabilitada \\((OE = 1)\\), independentemente do estado do pino de controle de leitura, a saída do registrador é mantida em alta impedância, ou seja, não é possível nem ler nem gravar o valor armazenado no registrador, já que o pino \\(O\_{n}\\) quando em alta impedância se comporta como um circuito aberto, desconectado do circuito.
+    - A Tabela 1, que representa a tabela verdade do registrador 74373 simplifica o entendimento das operações descritas acima.
+- Apesar de termos usado o registrador 74373 como exemplo, as explicações aqui contidas generalizam para outros registradores de \\(n\\) bits.
+- Por fim, a lógica do registrador 74373 com os componentes que o compõem é ilustrada pela Figura 7, presente no próximo slide.
+
+</div>
+<div class="grid-element">
+<table>
+    <caption style="caption-side: bottom;">Tabela 1 - Tabela verdade do registrador 74373</caption>
+    <tr>
+        <th colspan="3">ENTRADAS</th>
+        <th>SAÍDAS</th>
+    </tr>
+    <tr>
+        <th>\(LE\)</th>
+        <th>\(\overline{OE}\)</th>
+        <th>\(D_{n}\)</th>
+        <th>\(O_{n}\)</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>X</td>
+        <td>Não Muda</td>
+    </tr>
+    <tr>
+        <td>X</td>
+        <td>1</td>
+        <td>X</td>
+        <td>\(Z\) (Alta impedância)</td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Arquitetura de Computadores - Funcionamento do Registrador Comercial 74373
+</div>
+<div class="conteudo-absoluto regular">
+<figure>
+    <img class="transparent" src="./img/74373-internal.png" style="margin-left: auto; margin-right: auto;" />
+    <figcaption style="text-align: center;">Figura 7: Lógica interna do Registrador Comercial 74373</figcaption>
+</figure>
+</div>
+
+
+---
+
+<div class="cabecalho">
+    Arquitetura de Computadores — Memória
+</div>
+<div class="conteudo-absoluto" style="top: 25%;">
+
+<div class="grid-66-33">
+<div class="grid-element footnotesize">
+
+Com um registrador, é possível armazenar uma palavra (informação) de \\(n\\) bits. Com a memória, podemos armazenar milhares, milhões, bilhões delas. A memória é um dispositivo que armazena informações para serem lidas e escritas. Ela é composta por células de memória, que são organizadas em endereços. Cada célula de memória armazena uma palavra de \\(n\\) bits.
+
+Para compor as células de memória, podem ser utilizados dispositivos como flip-flops, registradores ou quaisquer outros que sirvam para o mesmo fim, tais quais: capacitores, transistores, etc. Os circuitos de memória normalmente possuem os seguintes componentes:
+
+- Vias de dados (\\(IO_{n}\\)), que são utilizadas para ler e armazenar palavras binárias na memória — entrada e saída de dados — sendo comumente bidirecionais.
+- Vias de endereços (\\(A_{n}\\)), que são utilizadas para selecionar a célula de memória que se deseja ler ou escrever de acordo com seu endereço.
+- Uma entrada (*Chip Select* — \\(CS\\)) que habilita ou desabilita a memória para leitura ou escrita. Quando desabilitada, a memória não pode ser acessada e se comporta no circuito elétrico como um elemento de alta impedância, ou seja, como se não estivesse conectada ao circuito.
+- Uma entrada (*Write Enable* — \\(WE\\)) para habilitar o modo da operação (leitura ou escrita) desejada, quando permitido.
+
+A Figura 8, ao lado, ilustra um circuito típico de memória com capacidade para armazenar 1024 palavras de 8 bits cada.
+
+</div>
+<div class="grid-element small">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/1kram.png)
+
+<figcaption>Figura 8 — Circuito de memória com capacidade para armazenar 1024 palavras de 8 bits cada.</figcaption>
+</figure>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Arquitetura de Computadores — Determinação da Capacidade de Armazenamento de uma Memória
+</div>
+<div class="conteudo-absoluto regular">
+
+- Como saber a quantidade de palavras que uma memória pode armazenar?
+    - Através da quantidade de pinos de endereço que a memória possui:
+\\[
+\\begin{align}
+    & \\text{qtd palavras} = 2^{\\text{n}}, \\\\
+    & \\text{onde n é a quantidade de pinos de endereço}
+\\end{align}
+\\]
+
+- Como saber quantos bits a memória pode armazenar?
+    - Através da quantidade de pinos de dados \\((IO)\\) que a memória possui.
+
+- Qual a capacidade da memória, em bits?
+    - A capacidade da memória, em bits, é dada pela multiplicação da quantidade de palavras pela quantidade de bits por palavra, ou seja:
+\\[
+\\begin{align}
+    & \\text{capacidade} = \\text{qtd palavras} \\times \\text{qtd bits por palavra}
+\\end{align}
+\\]
+    - Em bytes, é dada pela fórmula anterior dividida por 8.
+
+</div>

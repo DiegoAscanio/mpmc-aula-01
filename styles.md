@@ -29,7 +29,7 @@
     top: 30%;
     margin-top: 7.5vh;
     margin-left: 5%;
-    margin-right: 10%;
+    margin-right: 5%;
     font-size: 28px;
     text-align: justify;
   }
@@ -38,15 +38,16 @@
     position: absolute;
     top: 30%;
     margin-left: 5%;
-    margin-right: 10%;
+    margin-right: 5%;
     font-size: 28px;
     text-align: justify;
   }
-  
+  .huge {
+    font-size: 32px;
+  }
   .large {
     font-size: 24px;
   }
-
   .normal {
     font-size: 22px;
   }
@@ -107,6 +108,7 @@
     padding-right: 2.5%;
   }
   img[alt=grid-img] {
+    display: block;
     width: 100%;
   }
 
