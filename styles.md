@@ -112,6 +112,12 @@
     width: 100%;
   }
 
+  img[alt=grid-img-50] {
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+
 </style>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

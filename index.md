@@ -112,6 +112,12 @@
     width: 100%;
   }
 
+  img[alt=grid-img-50] {
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+
 </style>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -140,7 +146,8 @@ CEFET-MG DECOMDV — Divinópolis, 2024
 2. Revisão sobre arquitetura de computadores.
     1. Fundamentos dos sistemas digitais.
     2. Registradores e memórias.
-    3. Processadores.
+    3. Componentes básicos de um sistema computacional.
+    4. Processadores.
         1. Arquitetura HARVARD vs VON NEUMANN.
         2. Arquitetura RISC vs CISC.
         3. Arquitetura interna dos processadores.
@@ -711,4 +718,261 @@ Existem diversos tipos de memórias, cada uma com suas características e aplica
 - EPROM e EEPROM
 - Flash
 
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Memória RAM
+</div>
+<div class="conteudo regular">
+<div class="grid-66-33">
+<div class="grid-element">
+
+**Memória RAM — Memória de Acesso Aleatório**
+
+- A memória RAM (Random Access Memory) é uma memória de leitura e escrita. Um exemplo de memória RAM é demonstrado pela Figura 9.
+    - Pode ter armazenada (em si) um determinado valor e, a *posteriori*, retornar tal valor em uma operação de leitura.
+    - Tem esse nome porque o acesso a qualquer posição de memória é feito de forma aleatória (*random*).
+    - Os dados na memória RAM são persistidos somente quando a memória está funcionando, por isso, diz-se que a memória RAM é uma memória volátil.
+    - São categorizadas em dois tipos:
+        1. Estáticas.
+        2. Dinâmicas.
+
+</div>
+<div class="grid-element">
+
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/ddr3.png)
+
+<figcaption>
+
+Figura 9 — Memória Ram DDR3 Utilizada em *Notebooks*
+
+</figcaption>
+
+</figure>
+
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Memória RAM
+</div>
+<div class="conteudo small">
+<div class="grid-66-33">
+<div class=grid-element">
+
+## Memórias RAM estáticas (SRAM)
+
+- Os bits são armazenados em flip-flops individuais.
+    - Permanecem armazenados enquanto a SRAM for energizada.
+
+A Figura 10 ilustra uma célula de memória SRAM construída com flip-flops.
+
+## Memórias RAM dinâmicas (DRAM)
+
+- Armazenam os bits em capacitores de dimensões nanométricas (através de carga / descarga).
+- Capacitores nanométricos ocupam muito menos espaço que flip-flops, por isso, DRAM são muito mais **densas** (e compactas) que SRAM.
+    - Entretanto, os capacitores nanométricos perdem carga com o tempo, por isso, os capacitores da DRAM precisam ser reenergizados constantemente, se necessário.
+    - A atualização constante é feita por um circuito chamado de *refresh*.
+
+A Figura 11 mostra o diagrama de circuito de uma memória DRAM.
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img-50](./img/sram.png)
+
+<figcaption>
+
+Figura 10 — Célula de memória SRAM.
+
+</figcaption>
+
+</figure>
+<figure>
+
+<!-- _class: transparent -->
+![](./img/dram.png)
+
+<figcaption>
+
+Figura 11 — Circuito de uma memória DRAM.
+
+</figcaption>
+
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Memória RAM
+</div>
+<div class="conteudo small">
+<div class="grid-66-33">
+<div class="grid-element">
+
+- Como visto anteriormente, a maioria das memórias RAMS dispõem de uma entrada de controle chamada *Chip Select* (`CS`) — destacada na Figura 12 — utilizada para habilitar (ou desabilitar) a memória no circuito.
+    - Dispor desta entrada permite que sejam utilizadas várias memórias RAMS em paralelo, num mesmo circuito, sem que haja conflito entre elas.
+        - Isto para que seja melhorada a capacidade de armazenamento e manuseio de dados.
+    - Quando a memória encontra-se desabilitada \\((\\text{CS} = 1)\\), ela assume estado de alta impedância, fazendo com que esteja desconectada de demais componentes do circuito.
+        - Nesta ocorrência, não é possível ler ou escrever dados na memória.
+- Além desta entrada de controle, as RAMS dispõem de entrada de habilitação de escrita / leitura (`WE`), pinos de endereço \\(A_{n}\\) e de dados \\(\\text{IO}_{n}\\) como também visto anteriormente.
+- É sempre importante conhecer o *datasheet* da memória que se está utilizando, pois, os níveis lógicos das entradas de controle podem variar de acordo com o fabricante.
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/1kram-cs.png)
+
+<figcaption>Figura 12 — Entrada de controle CS (destacada em vermelho) em uma Memória de RAM 1KB.</figcaption>
+
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Memória RAM
+</div>
+<div class="conteudo small">
+<div class="grid-66-33">
+<div class="grid-element">
+
+## Memória RAM — Funcionamento
+
+<div class="grid-50-50 scriptsize">
+<div class="grid-element">
+
+### Escrita
+
+Para escrever dados na memória RAM é necessário:
+
+1. Habilitar o chip de memória `CS = 0` (em vermelho na Figura 13).
+2. Colocar a palavra (a informação) que se deseja armazenar no barramento de dados `I/O` (em azul na Figura 13).
+3. Colocar o endereço da célula de memória onde se deseja armazenar a palavra no barramento de endereços `A` (em verde na Figura 13).
+4. Habilitar o sinal de escrita \\(\\overline{\\text{WE}} = 0\\) (em amarelo na Figura 13).
+
+A partir desse momento, o dado já está armazenado na memória.
+
+</div>
+<div class="grid-element">
+
+### Leitura
+
+Para ler dados da memória RAM é necessário:
+
+1. Habilitar o chip de memória `CS = 0`.
+2. Colocar o endereço da célula de memória que se deseja ler no barramento de endereços `A`.
+3. Habilitar o sinal de leitura \\(\\overline{\\text{WE}} = 1\\).
+
+A partir desse momento, o dado que estava armazenado na célula de memória selecionada é colocado no barramento de dados `I/O`.
+Considere as mesmas referências de cores na Figura 13 descritas na operação de escrita.
+
+</div>
+</div>
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/1kram-highlighted.png)
+
+<figcaption>Figura 13 — Memória de RAM 1KB com barramentos de dados, endereços e pinos de controle destacados.</figcaption>
+
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Memória ROM
+</div>
+<div class="conteudo normal">
+
+- A memória ROM (Read Only Memory) é uma memória de leitura, ou seja, os dados nela contidos não podem ser alterados. Ela é usada para armazenar programas que não precisam ser alterados, como o BIOS de um computador.
+- Os conteúdos da ROM são não voláteis, ou seja, não são perdidos quando a energia é desligada.
+- Também são fixos e inalteráveis, sendo gravados durante a fabricação do chip.
+    - Portanto, não são necessários dispositivos de armazenamento de estados como *latches* ou *flip-flops*, o que torna a ROM mais barata e mais simples do que a RAM.
+- Pode-se considerar que uma ROM é um siples conversor de endereços para dados, onde o endereço é a entrada e o dado é a saída.
+
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Memória PROM
+</div>
+<div class="conteudo normal">
+
+- A memória PROM (Programmable Read-Only Memory) é uma memória de leitura que pode ser programada uma única vez.
+- Ela é feita de um conjunto de microfusíveis que podem ser abertos (queimados) ou fechados (mantidos) para representar os bits de um dado.
+- A programação é feita por um dispositivo que aplica uma alta tensão para queimar os fusíveis.
+- Uma vez programada, a memória PROM não pode ser reprogramada.
+- Toda memória ROM foi uma PROM até ser fabricada?
+
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Memória EPROM
+</div>
+<div class="conteudo scriptsize">
+<div class="grid-66-33">
+<div class="grid-element">
+
+- Erasable and Programmable Read-Only Memory (EPROM) é um tipo de memória de leitura que pode ser apagada e reprogramada.
+- Seus dados são armazenados em dispositivos baseados em transistores MOSFET.
+    - Um transistor é uma chave digital (interruptor) que pode ser ligada ou desligada a partir de um sinal elétrico aplicado em seu terminal de controle (normalmente a base).
+        - Quando a chave está ligada, a corrente elétrica pode fluir entre os terminais de entrada e saída do transistor (normalmente coletor e emissor) e se existe fluxo de corrente, logo, existe tensão \\((V = R \cdot I)\\). Portanto, entre os terminais de entrada e saída do transistor, que representam um bit, se existe um valor de tensão, logo existe um nível lógico alto (ou 1).
+        - Quando a chave está desligada, a corrente elétrica não flui entre os terminais de entrada e saída do transistor, portanto, não existe fluxo de corrente. Se não existe corrente, a tensão entre os terminais é zero. Portanto, entre os terminais de entrada e saída do transistor, que representam um bit, se não existe um valor de tensão, logo existe um nível lógico baixo (ou 0).
+    - Para programar uma EPROM é necessário um dispositivo chamado de programador de EPROM.
+- Mas como apagar EPROMS?
+    - Quando MOSFETS são expostos a uma luz UV forte por um determinado período de tempo (apx. 30 min.) ocorre uma fuga de cargas elétricas que estavam armazenadas nos transistores, fazendo com que eles voltem ao estado original, ou seja, apagando os dados.
+- As Figuras 14 e 15 mostram, respectivamente, o diagrama da memória comercial EPROM 2764 e sua embalagem (sua casca) com janela de quartzo (no centro) para exposição à luz UV.
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/eprom-2764.png)
+
+<figcaption> Figura 14 — EPROM 2764 </figcaption>
+</figure>
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/embalagem-eprom-2764.png)
+
+<figcaption> Figura 15 — Embalagem da EPROM 2764 </figcaption>
+</figure>
+</div>
+</div>
 </div>
