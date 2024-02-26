@@ -95,6 +95,18 @@
     text-align: justify;
   }
 
+  .grid-75-25 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    text-align: justify;
+  }
+
+  .grid-80-20 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    text-align: justify;
+  }
+
   .grid-33-66 {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -117,6 +129,13 @@
     margin: auto;
     width: 50%;
   }
+
+  img[alt=grid-img-75] {
+    display: block;
+    margin: auto;
+    width: 75%;
+  }
+
 
   img[alt=centered-img] {
     display: block;

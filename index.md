@@ -95,6 +95,18 @@
     text-align: justify;
   }
 
+  .grid-75-25 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    text-align: justify;
+  }
+
+  .grid-80-20 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    text-align: justify;
+  }
+
   .grid-33-66 {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -117,6 +129,13 @@
     margin: auto;
     width: 50%;
   }
+
+  img[alt=grid-img-75] {
+    display: block;
+    margin: auto;
+    width: 75%;
+  }
+
 
   img[alt=centered-img] {
     display: block;
@@ -1095,4 +1114,134 @@ Considere as mesmas referências de cores na Figura 13 descritas na operação d
 <!-- _class: transparent -->
 ![centered-img](./img/memoria-exercicio-2.png)
 
+</div>
+
+
+---
+
+<!-- _class: lead -->
+# Revisão Sobre Arquitetura de Computadores
+## Componentes Básicos de Um Sistema Computacional
+
+
+---
+
+<div class="cabecalho huge">
+    Componentes Básicos de Um Sistema Computacional
+</div>
+<div class="conteudo small">
+
+Os computadores digitais — booleanos — podem ser descritos como um conjunto de memória, processador e dispositivos de entrada e saída (periféricos) que comunicam-se por um barramento, como mostrado pela Figura 20:
+
+<figure>
+
+<!-- _class: transparent -->
+![centered-img](./img/sistema-computacional.png)
+
+<figcaption style="text-align: center;">Figura 20 — Elementos básicos de um sistema computacional</figcaption>
+</figure>
+
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Componentes Básicos de Um Sistema Computacional — Memória
+</div>
+<div class="conteudo">
+<div class="grid-75-25">
+<div class="grid-element tiny">
+
+- Nos sistemas computacionais as memórias podem ser classificadas em dois tipos:
+    - Primárias — utilizadas para disponibilizar uma quantidade limitada de dados e instruções que estão em uso pelo processador.
+    - Secundárias — utilizadas para armazenar grandes quantidades de dados dos programas e arquivos dos utilizadores de um computador.
+
+- Nenhuma das memórias vistas até então, exceto a memória Flash, pode ser usada como memória secundária.
+- A grande diferença entre as memórias primárias e secundárias é dada pelos seguintes fatores:
+    - Velocidade de acesso — memórias primárias são mais rápidas que secundárias.
+    - Capacidade de armazenamento — memórias secundárias armazenam mais dados que primárias.
+    - Volatilidade — memórias secundárias não perdem os dados quando desenergizadas, enquanto as primárias perdem.
+    - Custo — memórias secundárias são mais baratas que as primárias quando a capacidade é a métrica de avaliação.
+
+São exemplos de memórias primárias:
+
+- Memória RAM (composta por células capacitivas dinâmicas DRAM)
+- Memória Cache — composta por células de *flip-flops* estáticas SRAM — mostrada na Figura 21.
+- Memórias SRAM são mais rápidas que DRAM, mas são mais caras de se produzir, e portanto, menores.
+    - Para que servem as memórias Cache?
+    <!-- Resposta: para armazenar dados e instruções que são frequentemente acessados pelo processador, de forma a reduzir o tempo de acesso a esses dados e instruções. -->
+
+São exemplos de memórias secundárias:
+
+- Disco Rígido (mostrado na Figura 22)
+- Memória Flash
+
+</div>
+<div class="grid-element scriptsize">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/cache.png)
+
+<figcaption>Figura 21 — Memória cache ao lado de um processador</figcaption>
+</figure>
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/harddisk.png)
+
+<figcaption>Figura 22 — Disco rígido</figcaption>
+</figure>
+
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Componentes Básicos de Um Sistema Computacional — Periféricos (Dispositivos de Entrada e Saída)
+</div>
+<div class="conteudo normal">
+
+- Todos os sistemas computacionais devem ser capazes de se comunicar com o mundo exterior.
+    - Para isso, eles utilizam periféricos, que são dispositivos de entrada e saída.
+- Os periféricos podem ser classificados em:
+    - Dispositivos de entrada (Teclado, mouse, scanner, etc.)
+    - Dispositivos de saída (Monitor, impressora, etc.)
+    - Dispositivos de entrada e saída bidirecionais (Telas touchscreen, por exemplo)
+
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Componentes Básicos de Um Sistema Computacional — Processador
+</div>
+<div class="conteudo small">
+
+O processador é o componente mais importante de um sistema computacional. Ele é responsável por executar as instruções de um programa, que são armazenadas na memória. O processador é composto por vários componentes, que são responsáveis por realizar as operações necessárias para a execução das instruções. Os principais componentes de um processador são:
+
+- Unidade de Controle
+- Unidade Lógica e Aritmética
+- Registradores
+
+A Unidade de Controle é responsável por controlar a execução das instruções. Ela é responsável por buscar as instruções na memória, decodificar as instruções e controlar a execução das instruções.
+
+A Unidade Lógica e Aritmética é responsável por realizar as operações lógicas e aritméticas. Ela é responsável por realizar as operações de adição, subtração, multiplicação, divisão, comparação, entre outras.
+
+Os Registradores são responsáveis por armazenar os dados temporários que são utilizados pela Unidade de Controle e pela Unidade Lógica e Aritmética.
+
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Componentes Básicos de Um Sistema Computacional — Barramento
+</div>
+<div class="conteudo small">
 </div>
