@@ -118,6 +118,11 @@
     width: 50%;
   }
 
+  img[alt=centered-img] {
+    display: block;
+    margin: auto;
+  }
+
 </style>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

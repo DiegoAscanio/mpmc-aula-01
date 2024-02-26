@@ -118,6 +118,11 @@
     width: 50%;
   }
 
+  img[alt=centered-img] {
+    display: block;
+    margin: auto;
+  }
+
 </style>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -1044,4 +1049,50 @@ Considere as mesmas referências de cores na Figura 13 descritas na operação d
 </figure>
 </div>
 </div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Associação de Memórias
+</div>
+<div class="conteudo small">
+<div class="grid-50-50">
+<div class="grid-element">
+
+- Assuma agora que sua aplicação demande o armazenamento de 2048 palavras de 8 bits cada, mas, que os CIs de memória disponíveis consigam armazenar apenas 1024 palavras de 8 bits cada. Como você faria para atender a essa demanda?
+    - Com a construção de um mux de 2 bits, é possível associar dois CIs de memória de 1024 palavras de 8 bits cada, de forma que, ao selecionar um CI — através do próprio bit de endereço — o mux direcione o sinal de leitura/escrita para uma das memórias de 1024 palavras. Dessa forma, é possível armazenar 2048 palavras de 8 bits cada, como mostrado pela Figura 19:
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/ram-1024-2048.png)
+
+<figcaption> Figura 19 — Associação de memórias para aumentar a quantidade de palavras armazenadas </figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Exercícios
+</div>
+<div class="conteudo small">
+
+1. Para os dois circuitos integrados da figura a seguir determine o número de registradores utilizando a fórmula vista anteriormente.
+
+<!-- _class: transparent -->
+![centered-img](./img/memoria-exercicio-1.png)
+
+2. Interconecte as duas memórias a seguir para formar uma única memória com o dobro de registradores. A memória resultante deve ter seis vias de endereços e oito saídas de dados
+
+<!-- _class: transparent -->
+![centered-img](./img/memoria-exercicio-2.png)
+
 </div>
