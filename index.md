@@ -171,7 +171,7 @@ CEFET-MG DECOMDV — Divinópolis, 2024
     1. Fundamentos dos sistemas digitais.
     2. Registradores e memórias.
     3. Componentes básicos de um sistema computacional.
-    4. Processadores.
+    4. Microprocessadores.
         1. Arquitetura HARVARD vs VON NEUMANN.
         2. Arquitetura RISC vs CISC.
         3. Arquitetura interna dos processadores.
@@ -1243,5 +1243,24 @@ Os Registradores são responsáveis por armazenar os dados temporários que são
 <div class="cabecalho huge">
     Componentes Básicos de Um Sistema Computacional — Barramento
 </div>
-<div class="conteudo small">
+<div class="conteudo-absoluto small">
+
+- O barramento em um sistema computacional é o componente responsável por interligar os demais componentes do sistema;
+- Em computador de mesa, a placa mãe — ilustrada pela Figura 23 — é o componente que implementa o barramento.
+
+<figure>
+
+<!-- _class: transparent -->
+![centered-img](./img/mobo.png)
+
+<figcaption style="text-align: center;">Figura 23 — Placa mãe</figcaption>
+</figure>
+
 </div>
+
+
+---
+
+<!-- _class: lead -->
+# Revisão Sobre Arquitetura de Computadores
+## Processadores
