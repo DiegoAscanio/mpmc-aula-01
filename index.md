@@ -943,18 +943,19 @@ Considere as mesmas referências de cores na Figura 13 descritas na operação d
 <div class="cabecalho huge">
     Memórias — Memória EPROM
 </div>
-<div class="conteudo scriptsize">
+<div class="conteudo scriptsize" style="padding-top: 7.5vh;">
 <div class="grid-66-33">
 <div class="grid-element">
 
 - Erasable and Programmable Read-Only Memory (EPROM) é um tipo de memória de leitura que pode ser apagada e reprogramada.
-- Seus dados são armazenados em dispositivos baseados em transistores MOSFET.
+- Seus dados são armazenados em dispositivos baseados em transistores MOSFET de portas flutuantes (*Floating Gate MOSFET*).
     - Um transistor é uma chave digital (interruptor) que pode ser ligada ou desligada a partir de um sinal elétrico aplicado em seu terminal de controle (normalmente a base).
         - Quando a chave está ligada, a corrente elétrica pode fluir entre os terminais de entrada e saída do transistor (normalmente coletor e emissor) e se existe fluxo de corrente, logo, existe tensão \\((V = R \cdot I)\\). Portanto, entre os terminais de entrada e saída do transistor, que representam um bit, se existe um valor de tensão, logo existe um nível lógico alto (ou 1).
         - Quando a chave está desligada, a corrente elétrica não flui entre os terminais de entrada e saída do transistor, portanto, não existe fluxo de corrente. Se não existe corrente, a tensão entre os terminais é zero. Portanto, entre os terminais de entrada e saída do transistor, que representam um bit, se não existe um valor de tensão, logo existe um nível lógico baixo (ou 0).
     - Para programar uma EPROM é necessário um dispositivo chamado de programador de EPROM.
 - Mas como apagar EPROMS?
-    - Quando MOSFETS são expostos a uma luz UV forte por um determinado período de tempo (apx. 30 min.) ocorre uma fuga de cargas elétricas que estavam armazenadas nos transistores, fazendo com que eles voltem ao estado original, ou seja, apagando os dados.
+    - Quando MOSFETS são expostos a uma luz UV forte por um determinado período de tempo (apx. 30 min.) ocorre uma fuga de cargas elétricas que estavam armazenadas nas portas flutuantes dos transistores, fazendo com que eles voltem ao estado original, ou seja, apagando os dados.
+        - As portas flutuantes são capazes de armazenar cargas elétricas por um longo período de tempo, mesmo sem alimentação elétrica.
 - As Figuras 14 e 15 mostram, respectivamente, o diagrama da memória comercial EPROM 2764 e sua embalagem (sua casca) com janela de quartzo (no centro) para exposição à luz UV.
 
 </div>
@@ -972,6 +973,74 @@ Considere as mesmas referências de cores na Figura 13 descritas na operação d
 ![grid-img](./img/embalagem-eprom-2764.png)
 
 <figcaption> Figura 15 — Embalagem da EPROM 2764 </figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — EEPROM e Flash
+</div>
+<div class="conteudo small" style="padding-top: 7.5vh;">
+<div class="grid-66-33">
+<div class="grid-element">
+
+- EEPROM — Electrically Erasable Programmable Read-Only Memory — e Flash são memórias apagáveis e programáveis eletricamente.
+    - Benefícios:
+        - Não necessitam de remoção para programação.
+        - Podem ser programadas e apagadas no circuito.
+        - Podem ser reprogramadas muitas vezes.
+    - Diferenças:
+        - EEPROM — apagamento e programação por byte, mais flexível, mais lenta, mais cara.
+        - Flash — apagamento e programação por bloco, menos flexível, mais rápida, mais barata.
+    - Casos de uso:
+        - Atualização frequente de pequenas quantidades de dados com alta flexibilidade: EEPROM.
+        - Armazenamento em massa de dados que demandam rapidez na escrita: Flash.
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/eeprom-24c64.png)
+
+<figcaption> Figura 16 — EEPROM 24C64 </figcaption>
+</figure>
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/usb-flash-drive.png)
+
+<figcaption> Figura 17 — Dispositivo de Armazenamento USB (majoritariamente baseados em memórias Flash) </figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+---
+
+<div class="cabecalho huge">
+    Memórias — Associação de Memórias
+</div>
+<div class="conteudo small">
+<div class="grid-33-66">
+<div class="grid-element">
+
+- Quando o número de palavras ou número de bits por palavra em um sistema de memória não é suficiente, pode-se associar memórias para aumentar estas grandezas.
+- Imagine que seja necessário operar palavras de 16 bits, mas, que a memória disponível seja de 8 bits. Pode-se associar duas memórias de 8 bits para formar uma memória de 16 bits como ilustrado pela Figura 18.
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/ram-8-to-16.png)
+
+<figcaption> Figura 18 — Associação de memórias para aumentar a quantidade de bits por palavra </figcaption>
 </figure>
 </div>
 </div>
