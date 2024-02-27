@@ -1498,3 +1498,43 @@ Figura 24 - Arquitetura básica de um microprocessador
 Em suma, a escolha entre Harvard Von Neumman depende das necessidades específicas da solução a ser implementada.
 
 </div>
+
+
+---
+
+## Microprocessadores — Arquitetura RISC vs Arquitetura CISC
+
+<div class="small">
+
+RISC (Reduced Instruction Set Computer) e CISC (Complex Instruction Set Computer) são dois paradigmas de projeto de instruções de processadores que possuem abordagens distintas na implementação. Ambas têm como objetivo melhorar o desempenho dos computadores, mas adotam estratégias diferentes para alcançar esse objetivo.
+
+### Arquitetura CISC
+
+CISC possui um conjunto de instruções muito amplo, com uma grande variedade de instruções para a realização de tarefas específicas. Isso possibilita a produção de programas complexos com poucas linhas de instruções, diminuindo assim o tempo de programação.
+
+**Características Intrinsecas:**
+
+- Instruções de múltiplos ciclos: As instruções CISC podem realizar várias operações dentre de uma única instrução, o que ocasiona em um aumento da quantidade de ciclos de clock para serem executadas.
+- Decodificação de instruções: Instruções CISC são complexas e em grande número, o que torna necessário uma lógica de decodificação mais complexa, aumentando assim o custo e a complexidade do processador.
+- Uso de memória: Por menos instruções serem necessárias para realizar uma tarefa, o uso de memória é reduzido, o que é uma vantagem para sistemas com memória limitada.
+
+</div>
+
+
+---
+
+## Microprocessadores — Arquitetura RISC vs Arquitetura CISC
+
+<div class="small">
+
+### Arquitetura RISC
+
+RISC se caracteriza por possuir um conjunto menor de instruções, com o foco em instruções que podem ser executadas em apenas um único ciclo de clock, o que beneficia o *design* do *hardware* e a decodificação de instruções, por tornar ambos processos mais simples.
+
+**Características Intrinsecas:**
+
+- Instruções de um único ciclo: A maioria das instruções são executadas em um único ciclo de clock, o que torna o processador mais previsível e eficiente.
+- *Pipelining*: A simplicidade das instruções facilita a implementação de técnicas como o *pipelining*, que permite a execução de múltiplas instruções simultaneamente em diferentes estágios da execução. Isso aumenta a eficiência do processamento.
+- Uso de registradores: RISC utiliza um grande número de registradores, o que permite que a maioria das operações seja realizada diretamente nos registradores, minimizando a necessidade de acessar os caches e a RAM, que são mais lentos.
+
+</div>
