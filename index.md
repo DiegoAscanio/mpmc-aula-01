@@ -1566,3 +1566,56 @@ Em dispositivos móveis, sistemas embarcados e *hardwares* de propósito especí
 As necessidades específicas de cada aplicação é que devem ditar a escolha da arquitetura de instruções mais apropriadas. Desempenho, eficiência e custo? **RISC**. Compatibilidade com softwares legados, códigos sucintos em linguagem de máquina e eficiência do uso da memória no armazenamento de instruções? **CISC**.
 
 </div>
+
+
+---
+
+<!-- _class: lead -->
+# Microprocessadores vs Microcontroladores
+
+
+---
+
+## Microprocessadores vs Microcontroladores
+
+<div class="grid-50-50 footnotesize">
+<div class="grid-element">
+
+- Microprocessadores são circuitos integrados que reúnem todos os componentes necessários para a execução dos comandos de um programa, mas não possuem memórias, nem dispositivos de entrada e saída ou circuito de clock.
+
+- Microcontroladores por sua vez são CIs que além de possuirem um microprocessador, dispõem também de todos os demais componentes necessários para o sistema funcionar de forma independente sem a necessidade de componentes externos.
+    - Em seu interior, dispõem de:
+        1. CPU (microprocessador);
+        2. Memória de dados (Quando RISC);
+        3. Memória de programa (Quando RISC);
+        4. Periféricos tais quais:
+            1. Circuito de Clock;
+            2. Temporizadores;
+            3. Contadores;
+            4. Interfaces de entrada e saída de propósito geral (GPIO);
+
+A Figura 32 apresenta a arquitetura de um microcontrolador genérico de 8 bits:
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![](./img/microcontroller.png)
+
+<figcaption style="text-align: center;">Figura 32 — Arquitetura de um microcontrolador 8 bits</figcaption>
+</figure>
+</div>
+</div>
+
+
+---
+
+## Referências Bibliográficas
+
+- [KERSCHBAUMER, R. Programação Aplicada a Microcontroladores. Luzerna: IFC - Instituto Federal de Educação, Ciência e Tecnologia Catarinense, 2018. ](https://professor.luzerna.ifc.edu.br/ricardo-kerschbaumer/wp-content/uploads/sites/43/2019/11/Apostila-Programa%C3%A7%C3%A3o-Aplicada-a-Microcontroladores-2018-2.pdf)
+
+
+---
+
+![centered-img](./img/thatsallfolks.webp)
