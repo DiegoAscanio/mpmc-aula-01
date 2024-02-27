@@ -1422,3 +1422,38 @@ Figura 24 - Arquitetura básica de um microprocessador
 
 </div>
 </div>
+
+
+---
+
+## Microprocessadores — Arquitetura Harvard vs Von Neumann
+
+<div class="small">
+
+- As arquiteturas Harvard e Von Neumann são dois modelos de arquitetura de processadores que diferem na forma como a memória principal é disponibilizada para o processador. 
+
+- A arquitetura Harvard é uma arquitetura que separa a memória em duas partes distintas, uma para armazenar dados e outra para armazenar instruções, como ilustrado pela Figura 30.
+
+- A arquitetura Von Neumann, por outro lado, utiliza uma única memória para armazenar tanto dados quanto instruções, como ilustrado pela Figura 31.
+
+</div>
+<div class="grid-50-50 footnotesize">
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img-50](./img/harvard.png)
+
+<figcaption style="text-align: center;">Figura 30 - Arquitetura Harvard</figcaption>
+</figure>
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img-50](./img/vonneumann.png)
+
+<figcaption style="text-align: center;">Figura 31 - Arquitetura Von Neumann</figcaption>
+</figure>
+</div>
+</div>
