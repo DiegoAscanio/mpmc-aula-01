@@ -75,6 +75,7 @@
   }
   section.lead p {
     text-align: justify;
+    font-size: 18px;
   }
   section.lead h1 {
     text-align: center;
@@ -142,6 +143,12 @@
     margin: auto;
   }
 
+  img[alt=arquitetura-microprocessador] {
+    display: block;
+    margin: auto;
+    width: 45%;
+  }
+
 </style>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -172,9 +179,9 @@ CEFET-MG DECOMDV — Divinópolis, 2024
     2. Registradores e memórias.
     3. Componentes básicos de um sistema computacional.
     4. Microprocessadores.
-        1. Arquitetura HARVARD vs VON NEUMANN.
-        2. Arquitetura RISC vs CISC.
-        3. Arquitetura interna dos processadores.
+        1. Arquitetura interna dos processadores.
+        2. Arquitetura HARVARD vs VON NEUMANN.
+        3. Arquitetura RISC vs CISC.
 3. Microcontroladores vs Microprocessadores.
 
 
@@ -1263,4 +1270,25 @@ Os Registradores são responsáveis por armazenar os dados temporários que são
 
 <!-- _class: lead -->
 # Revisão Sobre Arquitetura de Computadores
-## Processadores
+## Microprocessadores
+
+
+---
+
+## Microprocessadores — Arquitetura Interna
+
+<div style="font-size: 18px;">
+
+- Microprocessadores são a espinha dorsal de qualquer sistema computacional, seja ele de propósito genérico (computador de mesa, por exemplo) ou não.
+- Cada Microprocessador apresenta suas particularidades, entretanto, certos aspectos são comuns a todos eles. A Figura 24 apresenta a arquitetura básica de um microprocessador com os aspectos comuns a todos:
+
+<figure>
+
+<!-- _class: transparent -->
+![arquitetura-microprocessador](./img/arquitetura_microprocessador.png)
+
+<figcaption style="text-align: center;">
+Figura 24 - Arquitetura básica de um microprocessador
+</figcaption>
+</figure>
+</div>

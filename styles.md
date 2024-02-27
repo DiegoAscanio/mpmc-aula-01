@@ -75,6 +75,7 @@
   }
   section.lead p {
     text-align: justify;
+    font-size: 18px;
   }
   section.lead h1 {
     text-align: center;
@@ -140,6 +141,12 @@
   img[alt=centered-img] {
     display: block;
     margin: auto;
+  }
+
+  img[alt=arquitetura-microprocessador] {
+    display: block;
+    margin: auto;
+    width: 45%;
   }
 
 </style>
