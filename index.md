@@ -1292,3 +1292,74 @@ Figura 24 - Arquitetura básica de um microprocessador
 </figcaption>
 </figure>
 </div>
+
+
+---
+
+## Microprocessadores — Componentes Internos
+
+<div class="small grid-66-33">
+<div class="grid-element">
+
+### Registradores de Propósito Geral
+
+- Como o próprio nome sugere, são utilizados para armazenar quaisquer dados usados pelo processador, tais quais: endereços de memória, dados, instruções, resultados de operações, etc.
+- Nomeados de A até D (REG A, \\(\\cdots\\), REG D) no exemplo de arquitetura básica de processador estudado, como ilustrado pela Figura 25.
+- O número de registradores varia de acordo com a arquitetura do processador.
+    - No processador AVR, por exemplo, existem 32 registradores de 8 bits de propósito geral.
+    - No Z80, existem 16 registradores de 8 bits de propósito geral.
+    - No 8051 são 8 de 8 bits.
+
+</div>
+<div class="grid-element">
+<figure>
+
+<!-- _class: transparent -->
+![grid-img](./img/registradores-proposito-geral.png)
+
+<figcaption>Figura 25 — Registradores de propósito geral.</figcaption>
+</figure>
+</div>
+</div>
+
+
+---
+
+## Microprocessadores — Componentes Internos
+
+<div class="grid-50-50 small">
+<div class="grid-element">
+
+### Unidade Lógica Aritmética (ULA)
+
+- Unidade mais importante do processador, responsável pelas operações lógicas (comparações) e aritméticas (soma, subtração, multiplicação e divisão).
+- Possui somador, subtrator (em alguns casos, multiplicador e divisor), operadores lógicos bit a bit `AND`, `OR`, `XOR`, incrementador e decrementador.
+- Todos estes componentes integrados em apenas uma unidade.
+    - Portanto, todas as operações lógicas e aritméticas passam pela ULA.
+- A Figura 26 Ilustra a ULA com acumulador, registrador temporário e unidade de deslocamento interconectadas.
+
+#### Registrador Temporário
+
+- Registrador que armazena apenas um dos operadores da ULA.
+
+</div>
+<div class="grid-element">
+
+#### Acumulador
+
+- Registrador especial dedicado às operações da ULA.
+- É um dos operandos envolvidos nas operações da ULA, como também, é o registrador que guarda os resultados das operações da ULA.
+
+#### Unidade de Deslocamento
+
+- É um componente sequencial da ULA responsável por realizar deslocamentos bidirecionais de bits (direita ou esquerda) dos resultados da ULA utilizando para tanto um registrador apropriado.
+
+<figure>
+
+<!-- _class: transparent -->
+![grid-img-75](./img/ula.png)
+
+<figcaption>Figura 26 — Unidade Lógica Aritmética com acumulador, registrador temporário e unidade de deslocamento.</figcaption>
+</figure>
+</div>
+</div>
