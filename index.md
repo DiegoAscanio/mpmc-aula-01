@@ -1516,7 +1516,7 @@ CISC possui um conjunto de instruções muito amplo, com uma grande variedade de
 
 - Instruções de múltiplos ciclos: As instruções CISC podem realizar várias operações dentre de uma única instrução, o que ocasiona em um aumento da quantidade de ciclos de clock para serem executadas.
 - Decodificação de instruções: Instruções CISC são complexas e em grande número, o que torna necessário uma lógica de decodificação mais complexa, aumentando assim o custo e a complexidade do processador.
-- Uso de memória: Por menos instruções serem necessárias para realizar uma tarefa, o uso de memória é reduzido, o que é uma vantagem para sistemas com memória limitada.
+- Uso de memória: Por menos instruções serem necessárias para realizar uma tarefa, o uso de memória para armazenamento de instruções é reduzido, o que é uma vantagem para sistemas com memória limitada.
 
 </div>
 
@@ -1536,5 +1536,33 @@ RISC se caracteriza por possuir um conjunto menor de instruções, com o foco em
 - Instruções de um único ciclo: A maioria das instruções são executadas em um único ciclo de clock, o que torna o processador mais previsível e eficiente.
 - *Pipelining*: A simplicidade das instruções facilita a implementação de técnicas como o *pipelining*, que permite a execução de múltiplas instruções simultaneamente em diferentes estágios da execução. Isso aumenta a eficiência do processamento.
 - Uso de registradores: RISC utiliza um grande número de registradores, o que permite que a maioria das operações seja realizada diretamente nos registradores, minimizando a necessidade de acessar os caches e a RAM, que são mais lentos.
+- Uso maior de memória para armazenamento de instruções: Por possuir menos instruções, o código em linguagem de máquina de um processador RISC é maior, pois, para se realizar determinadas operações, um maior número de instruções nos programas é necessário.
+
+</div>
+
+
+---
+
+## Microprocessadores — Arquitetura RISC vs Arquitetura CISC: Comparativo Final
+
+<div class="small">
+
+### Desempenho
+
+RISC tem melhor desempenho em aplicações que se beneficiam de *pipelining* e execução rápida de instruções. CISC é mais eficiente em ambientes com restrições de memória e em aplicações que se beneficiam de instruções complexas.
+
+### Complexidade de *Hardware*
+
+RISC apresenta um design de *hardware* mais simples, o que resulta em *chips* menores e mais baratos. CISC, por requerer lógicas de decodificação mais complexas para suas instruções, apresenta um *hardware* mais complexo e mais caro.
+
+### Aplicações
+
+Em computadores de propósito genérico — *desktops* e servidores — CISC é mais comum, visto que a compatibilidade com *software* existente (legado) e a eficiência do uso de memória no armazenamento de instruções são cruciais.
+
+Em dispositivos móveis, sistemas embarcados e *hardwares* de propósito específico (como *switches*, *routers*, *firewalls* e demais ativos de rede), RISC é mais comum, visto que a eficiência energética, o desempenho por watt e o custo de *hardware* são mais importantes.
+
+### Conclusão
+
+As necessidades específicas de cada aplicação é que devem ditar a escolha da arquitetura de instruções mais apropriadas. Desempenho, eficiência e custo? **RISC**. Compatibilidade com softwares legados, códigos sucintos em linguagem de máquina e eficiência do uso da memória no armazenamento de instruções? **CISC**.
 
 </div>
