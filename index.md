@@ -250,11 +250,9 @@ Proporcionar ao estudante conhecimentos sobre:
 
 ---
 
-<div class="cabecalho" style="font-size: 36px;">
-    Apresentação da Disciplina — Atividades Avaliativas Teóricas
-</div>
+## Apresentação da Disciplina — Atividades Avaliativas Teóricas
 
-<div class="conteudo regular">
+<div class="regular">
 
 <!-- _class: centered -->
 
@@ -277,11 +275,9 @@ Proporcionar ao estudante conhecimentos sobre:
 
 ---
 
-<div class="cabecalho">
-    Apresentação da Disciplina — Atividades Avaliativas Práticas 
-</div>
+## Apresentação da Disciplina — Atividades Avaliativas Práticas 
 
-<div class="conteudo regular">
+<div class="regular">
 <div class="grid-50-50">
 <div class="grid-element">
 
