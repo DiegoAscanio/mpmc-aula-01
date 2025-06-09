@@ -258,17 +258,16 @@ Proporcionar ao estudante conhecimentos sobre:
 
 | Atividade                           | Valor | Data                          |
 | ----------------------------------- | ----- | ----------------------------- |
-| AV1                                 | 30    | 11/04/2024                    |
-| AVS*                                | 30    | 12/09/2024                    |
-| Teclado Numérico                    | 10    | 08/08/2024                    |
-| Seminários                          | 10    | Entre 15/08/2024 à 22/08/2024 |
-| Contador de Fichas de Sinuca        | 10    | 29/08/2024                    |
-| Trabalho Interdisciplinar Etapa I   | 13.34 | Até 13/09/2024                |
-| Trabalho Interdisciplinar Etapa II  | 13.33 | Até 13/09/2024                |
-| Trabalho Interdisciplinar Etapa III | 13.33 | Até 13/09/2024                |
+| AV1                                 | 30    | 10/07/2025                    |
+| AVS*                                | 30    | 24/07/2025                    |
+| Teclado Numérico                    | 04    | 12/06/2025                    |
+| Joystick tipo NES                   | 06    | 17/07/2025                    |
+| Seminários                          | 10    | Entre 12/06/2025 à 03/07/2025 |
+| Contador de Fichas de Sinuca        | 10    | 17/07/2025                    |
+| Trabalho Interdisciplinar (TID)     | 40    | Até 24/07/2025                |
 
-- A AVS é uma atividade avaliativa substitutiva que substitui a AV1 os alunos que quiserem melhorar a nota ou para os alunos que as perderem. Todo o conteúdo da disciplina será cobrado.
-- AV: Avaliação; TID: Trabalho Interdisciplinar; I, II e III: partes 1, 2 e 3 do trabalho interdisciplinar.
+- A AVS é uma atividade avaliativa substitutiva que substitui a AV1 para os alunos que quiserem melhorar a nota ou para os alunos que perderem a AV1. Todo o conteúdo da disciplina será cobrado.
+- AV: Avaliação; TID: Trabalho Interdisciplinar
 
 </div>
 
@@ -285,14 +284,13 @@ Proporcionar ao estudante conhecimentos sobre:
 
 | Atividade                           | Valor | Data                          |
 | ----------------------------------- | ----- | ----------------------------- |
-| TP1                                 | 15    | 08/05/2024                    |
-| Teclado Numérico                    | 10    | 08/08/2024                    |
-| Seminários                          | 10    | 15/08/2024 <br/> à 22/08/2024 |
-| Contador de Fichas de Sinuca        | 10    | 29/08/2024                    |
-| TP Final (dos seminários)           | 15    | Até 13/09/2024                |
-| Trabalho Interdisciplinar Etapa I   | 13.34 | Até 13/09/2024                |
-| Trabalho Interdisciplinar Etapa II  | 13.33 | Até 13/09/2024                |
-| Trabalho Interdisciplinar Etapa III | 13.33 | Até 13/09/2024                |
+| TPs (Aulas 01, 02 e 03)             | 15    |                               |
+| Teclado Numérico                    | 05    | 12/06/2025                    |
+| Joystick tipo NES                   | 10    | 17/07/2025                    |
+| Seminários                          | 10    | 12/06/2025 <br/> à 03/07/2025 |
+| Contador de Fichas de Sinuca        | 10    | 17/07/2025                    |
+| TP Final (dos seminários)           | 10    | Até 03/07/2025                |
+| Trabalho Interdisciplinar (TID)     | 40    | Até 13/09/2024                |
 
 </div>
 <div class="grid-element">
@@ -301,9 +299,8 @@ Proporcionar ao estudante conhecimentos sobre:
 
 -   TP: Trabalho Prático;
 -   TID: Trabalho Interdisciplinar;
--   I, II e III: partes 1, 2 e 3 do trabalho interdisciplinar;
 
-As datas das atividades avaliativas podem mudar — a critério meu e da profª Thabatta — de acordo com a conveniência da disciplina para melhor realização do trabalho interdisciplinar.
+As datas das atividades avaliativas podem mudar de acordo com a conveniência da disciplina para melhor realização do trabalho interdisciplinar.
 
 </div>
 </div>
